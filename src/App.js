@@ -2,7 +2,7 @@ import React from 'react';
 
 import { About, Footer, Header, Skill, Testimonial, Work } from './container';
 import { Navbar } from './components';
-import './App.css';
+import './Css/App.css';
 
 const App = () => {
   return (
