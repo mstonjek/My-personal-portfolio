@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion/dist/framer-motion"; // !
 import { images } from "../../constants";
 import "../Css/About.css";
 import { urlFor, client } from '../../client';
-
+import { AppWrap } from '../../wrapper';
 
 
 const About = () => {
@@ -54,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, 'about');

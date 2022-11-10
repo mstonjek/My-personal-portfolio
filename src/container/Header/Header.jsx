@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion"; // ! better import
 
+import { AppWrap } from '../../wrapper';
 import { images } from "../../constants";
 
 import "../Css/Header.css";
@@ -82,4 +83,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, 'home');
