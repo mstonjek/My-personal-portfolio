@@ -42,19 +42,19 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">☕ Brewing Connections Over Coffee! ☕</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">
-            hello@micael.com
+          <a href="mailto:mich.stonjek@gmail.com" className="p-text">
+            mich.stonjek@gmail.com
           </a>
         </div>
-        <div className="app__footer-card">
-          <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">
-            +1 (123) 456-7890
+        <div className="app__footer-card ">
+          <img src={images.mobile} alt="email" />
+          <a href="mailto:mich.stonjek@gmail.com" className="p-text">
+            mich.stonjek@gmail.com
           </a>
         </div>
       </div>
@@ -64,7 +64,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Your Name"
+              placeholder="Full name"
               name="username"
               value={username}
               onChange={handleChangeInput}
@@ -74,7 +74,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="email"
-              placeholder="Your Email"
+              placeholder="Example@email.com"
               name="email"
               value={email}
               onChange={handleChangeInput}
@@ -83,7 +83,7 @@ const Footer = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Write your message"
               value={message}
               name="message"
               onChange={handleChangeInput}
