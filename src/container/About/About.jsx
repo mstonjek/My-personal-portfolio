@@ -3,33 +3,25 @@ import { AnimatePresence, motion } from "framer-motion/dist/framer-motion"; // !
 
 import { images } from "../../constants";
 import "../Css/About.css";
-import { urlFor, client } from '../../client';
-import { AppWrap, MotionWrap } from '../../wrapper';
-
+import { urlFor, client } from "../../client";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
 
-    
-    useEffect(() => {
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
 
-      const query = '*[_type == "abouts"]';
-  
-      client.fetch(query)
-      .then((data) => setAbouts(data))
-  
-    }, []);
-  
-  
+    client.fetch(query).then((data) => setAbouts(data));
+  }, []);
 
   return (
     <>
       <h2 className="head-text">
-        I Know That<span> Good Apps</span>
+        PHP<span> Wizard</span>, 🧙‍♂️
         <br />
-        means<span> Good Business</span>
+        Code <span>Blizzards</span>.❄️
       </h2>
-
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
@@ -55,7 +47,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
-   'about',
-   "app__whitebg"
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
 );
