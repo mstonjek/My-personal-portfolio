@@ -5,10 +5,13 @@
 }
 
 .app__skills-container {
-  width: 80%;
+  width: 100%;
   margin-top: 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
   .app__skills-container {
@@ -18,12 +21,13 @@
 }
 
 .app__skills-list {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-right: 5rem;
+  width: 100%;
+  margin-bottom: 4rem;
 }
 @media screen and (max-width: 900px) {
   .app__skills-list {
@@ -83,6 +87,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   .app__skills-exp {
