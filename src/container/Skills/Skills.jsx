@@ -6,7 +6,6 @@ import { urlFor, client } from "../../client";
 
 import "../Css/Skills.css";
 
-
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -26,7 +25,9 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">
+        <span>Skills</span> & <span>Experiences</span>
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -100,7 +101,6 @@ export default AppWrap(
 );
 
 */
-
 
 /*
 const Skills = () => {

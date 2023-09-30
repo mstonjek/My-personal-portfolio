@@ -28,25 +28,19 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if(item === 'All') {
+      if (item === "All") {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
-
-
     }, 500);
   };
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Protfolio</span>
-        <br />
-        section
-      </h2>
-
+        <span>Developer</span> Skills <span>Exhibit</span> Hall 🏛️✨</h2>
       <div className="app__work-filter">
-        {["Python", "Web App", "Php"].map((item, index) => (
+        {["React", "PHP&MySQL", "HTML&CSS"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -58,7 +52,6 @@ const Work = () => {
           </div>
         ))}
       </div>
-
       <motion.div
         animate={animateCard}
         trasition={{ duration: 0.5, delayChildren: 0.5 }}
