@@ -17,11 +17,6 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        PHP<span> Wizard</span>, 🧙‍♂️
-        <br />
-        Code <span>Blizzards</span>.❄️
-      </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
