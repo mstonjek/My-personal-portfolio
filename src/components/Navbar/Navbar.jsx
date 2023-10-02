@@ -1,31 +1,27 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
-import {
-  BsBrightnessHighFill,
-  BsCheck2,
-} from "react-icons/bs";
-
+import { BsBrightnessHighFill, BsCheck2 } from "react-icons/bs";
+import useDarkMode from "./useDarkMode.jsx";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
 import { HiMoon } from "react-icons/hi2";
-
 import Dropdown from "react-bootstrap/Dropdown";
-
 import "../Css/Navbar.css";
 import { images } from "../../constants";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
+  const {
+    isDarkMode,
+    isAutoMode,
+    toggleDarkMode,
+    toggleAutoMode,
+    changeMode,
+  } = useDarkMode();
+  const [isToggleOpen, setToggleOpen] = React.useState(false);
   const [toggle, setToggle] = useState(false);
 
-
-
-
-
- const renderCheckmark = (isSelected) => {
-   return isSelected ? <BsCheck2 className="checkmark" /> : null;
- };
-
+  
 
   return (
     <nav className="app__navbar">
@@ -63,36 +59,44 @@ const Navbar = () => {
       </div>
       <Dropdown>
         <Dropdown.Toggle variant="light" id="darkModeToggle">
-          {isDarkMode ? <WiMoonAltThirdQuarter className="icon" /> : null}
+          {isDarkMode ? <HiMoon className="icon" /> : null}
           {!isDarkMode && !isAutoMode ? (
             <BsBrightnessHighFill className="icon" />
           ) : null}
-          {isAutoMode ? <HiMoon className="icon" /> : null}
+          {isAutoMode ? <WiMoonAltThirdQuarter className="icon" /> : null}
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
           <Dropdown.Item
-            onClick={() => handleModeChange("dark")}
+            onClick={() => changeMode("light")}
             className="dropdown-item"
           >
-            {isDarkMode && <span className="tick">✔</span>}{" "}
-            <HiMoon className="icon" />
-            <span className="dropdown-text">Dark</span>
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => handleModeChange("light")}
-            className="dropdown-item"
-          >
-            {!isDarkMode && <span className="tick-light">✔</span>}{" "}
             <BsBrightnessHighFill className="icon" />
             <span className="dropdown-text">Light</span>
+            {!isDarkMode && !isAutoMode && (
+              <BsCheck2 className="checkmark" />
+            )}{" "}
           </Dropdown.Item>
           <Dropdown.Item
-            onClick={() => handleModeChange("auto")}
+            onClick={() => changeMode("dark")}
+            className="dropdown-item"
+          >
+            <HiMoon className="icon" />
+            <span className="dropdown-text">Dark</span>
+            {isDarkMode && !isAutoMode && (
+              <BsCheck2 className="checkmark" />
+            )}{" "}
+          </Dropdown.Item>
+
+          <Dropdown.Item
+            onClick={() => changeMode("auto")}
             className="dropdown-item"
           >
             <WiMoonAltThirdQuarter className="icon" />
             <span className="dropdown-text">Auto</span>
+            {isAutoMode && !isDarkMode && (
+              <BsCheck2 className="checkmark" />
+            )}{" "}
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
