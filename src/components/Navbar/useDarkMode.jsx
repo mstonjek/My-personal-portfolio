@@ -27,7 +27,13 @@ const useDarkMode = () => {
   };
 
   useEffect(() => {
-    // Your dark mode logic here
+    const root = document.documentElement;
+
+   if (isDarkMode) {
+      root.classList.add("dark-mode");
+    } else {
+      root.classList.remove("dark-mode");
+    }
   }, [isDarkMode, isAutoMode]);
 
   return {

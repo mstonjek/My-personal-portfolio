@@ -171,5 +171,13 @@
 .checkmark {
   margin-left: 1rem;
 }
-
+.dd{
+  background-color: transparent !important;
+  border: none !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+#darkModeToggle{
+  border-color: none !important;
+}
 /*# sourceMappingURL=Navbar.css.map */

@@ -57,8 +57,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-      <Dropdown>
-        <Dropdown.Toggle variant="light" id="darkModeToggle">
+      <Dropdown className="dropdown">
+        <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle">
           {isDarkMode ? <HiMoon className="icon" /> : null}
           {!isDarkMode && !isAutoMode ? (
             <BsBrightnessHighFill className="icon" />

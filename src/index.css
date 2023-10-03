@@ -11,7 +11,20 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --dots-color: aliceblue;
 }
+
+:root.dark-mode {
+  --primary-color: #2c3e50;
+  --onhover-color: #34495e;
+  --black-color: #ffffff; /* Adjust the text color for dark mode */
+  --lightGray-color: #414a52;
+  --gray-color: #a2a9b0;
+  --brown-color: #867b91;
+  --white-color: #030303; /* Adjust the text color for dark mode */
+  --dots-color: none;
+}
+
 
 * {
   box-sizing: border-box;
