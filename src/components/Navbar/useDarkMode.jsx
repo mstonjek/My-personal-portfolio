@@ -7,10 +7,13 @@ const useDarkMode = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => !prev);
+    setIsAutoMode(false); // When manually toggling, switch to manual mode
   };
 
   const toggleAutoMode = () => {
     setIsAutoMode((prev) => !prev);
+    // When toggling auto mode, update isDarkMode based on system preference
+    updateDarkMode();
   };
 
   const changeMode = (mode) => {
@@ -23,18 +26,43 @@ const useDarkMode = () => {
     } else if (mode === "auto") {
       setIsDarkMode(false);
       setIsAutoMode(true);
+      // When switching to auto mode, update isDarkMode based on system preference
+      updateDarkMode();
     }
   };
 
-  useEffect(() => {
-    const root = document.documentElement;
+  const updateDarkMode = () => {
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches;
+    setIsDarkMode(prefersDarkMode);
+  };
 
-   if (isDarkMode) {
+  useEffect(() => {
+    // Check the system's dark mode preference when the component mounts
+    updateDarkMode();
+
+    // Listen for changes in the color scheme preference
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleDarkModeChange = (e) => setIsDarkMode(e.matches);
+    mediaQuery.addEventListener("change", handleDarkModeChange);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      mediaQuery.removeEventListener("change", handleDarkModeChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Apply dark mode class to root element
+    const root = document.documentElement;
+    if (isDarkMode) {
       root.classList.add("dark-mode");
     } else {
       root.classList.remove("dark-mode");
     }
-  }, [isDarkMode, isAutoMode]);
+  }, [isDarkMode]);
+
+
 
   return {
     isDarkMode,

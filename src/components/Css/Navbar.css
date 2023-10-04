@@ -35,9 +35,8 @@
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin-bottom: 0 !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-top: 5px !important;
+  margin-bottom: 0.75rem !important;
 }
 .app__navbar-links li {
   margin: 0 1rem;
@@ -156,15 +155,17 @@
   width: 20px; 
   height: 20px; 
   margin-right: 8px; 
+  color: var(--DarkModeSwitcher) !important;
 }
 .dropdown-item{
   margin-left: 5px;
   margin-right: 5px;
   width: auto !important;
+  color: var(--DarkModeSwitcher) !important;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-  background-color: #c6c7c8 !important;
+  background-color: var(--DMSwitcher-color) !important;
   border-radius: 5px;
 }
 
@@ -174,10 +175,15 @@
 .dd{
   background-color: transparent !important;
   border: none !important;
+  color: var(--DarkModeSwitcher) !important;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
 }
 #darkModeToggle{
   border-color: none !important;
+}
+.dm {
+  background-color: rgba(255, 255, 255, 0.05)!important;;
+  
 }
 /*# sourceMappingURL=Navbar.css.map */

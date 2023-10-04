@@ -7,28 +7,43 @@
   --secondary-color: #313bac;
   --onhover-color: #c2d4ec;
   --black-color: #030303;
-  --lightGray-color: #e4e4e4;                   /*? color setup */
+  --lightGray-color: #e4e4e4; /*? color setup */
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
   --dots-color: aliceblue;
+  --bg-src: url("./assets/bgIMG.png");
+  --logo-src: url("./assets/logo.png");
+  --DarkModeSwitcher: #000;
+  --DMSwitcher-color: #c6c7c8;
 }
 
 :root.dark-mode {
-  --primary-color: #2c3e50;
-  --onhover-color: #34495e;
-  --black-color: #ffffff; /* Adjust the text color for dark mode */
-  --lightGray-color: #414a52;
-  --gray-color: #a2a9b0;
-  --brown-color: #867b91;
-  --white-color: #030303; /* Adjust the text color for dark mode */
-  --dots-color: none;
+  --primary-color: #2e3440; /* A deep burgundy */
+  --secondary-color: #313bac; /* Your secondary color */
+  --onhover-color: #280e27; /* Slightly darker shade for hover effect */
+  --black-color: #88c0d0; /* Adjusted text color for dark mode */
+  --lightGray-color: #e4e4e4; /* Light gray for various UI elements */
+  --gray-color: #e4e4e4; /* A slightly darker gray */
+  --brown-color: #8b4513; /* A muted brownish color */
+  --white-color: #2c3e50; /* Background color for dark mode */
+  --dots-color: none; /* A color for indicating dots or separators */
+  --bg-src: none; /* Adjusted background image source */
+  --DarkModeSwitcher: #e4e4e4;
+  --DMSwitcher-color: #2c3e50;
 }
-
 
 * {
   box-sizing: border-box;
-  padding: 0;                       /**  ----------------     basic css     ------------------------- */
+  padding: 0; /**  ----------------     basic css     ------------------------- */
   margin: 0;
   scroll-behavior: smooth;
+}
+
+#home {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: var(--bg-src);
 }

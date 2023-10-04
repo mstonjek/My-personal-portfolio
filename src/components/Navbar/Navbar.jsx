@@ -21,12 +21,18 @@ const Navbar = () => {
   const [isToggleOpen, setToggleOpen] = React.useState(false);
   const [toggle, setToggle] = useState(false);
 
-  
-
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        {isDarkMode ? (
+          <a href="http://localhost:3000">
+            <img src={images.logoDark} alt="logo" />
+          </a>
+        ) : (
+          <a href="http://localhost:3000">
+            <img src={images.logo} alt="logo" />
+          </a>
+        )}
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
@@ -66,7 +72,7 @@ const Navbar = () => {
           {isAutoMode ? <WiMoonAltThirdQuarter className="icon" /> : null}
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="dm">
           <Dropdown.Item
             onClick={() => changeMode("light")}
             className="dropdown-item"
