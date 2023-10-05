@@ -55,7 +55,7 @@
   text-decoration: none;
   flex-direction: column;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease-in-out;
 }
 .app__navbar-links li a:hover {
@@ -174,16 +174,16 @@
 }
 .dd{
   background-color: transparent !important;
-  border: none !important;
   color: var(--DarkModeSwitcher) !important;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 #darkModeToggle{
   border-color: none !important;
 }
 .dm {
   background-color: rgba(255, 255, 255, 0.05)!important;;
-  
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;  
 }
 /*# sourceMappingURL=Navbar.css.map */

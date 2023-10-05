@@ -27,17 +27,17 @@
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #fef4f5;
+  background-color: var(--Contact-card);
   transition: all 0.3s ease-in-out;
   border: 1px solid var(--gray-color);
 }
 
 .app__footer-card a {
-  color: var(--black-color);
+  color: var(--ContactCardText);
 }
 
 .app__footer-card:hover {
-  background-color: var(--onhover-color) !important;
+  background-color: var(--onhover-contact) !important;
 }
 .app__footer-cards .app__footer-card img {
   width: 40px;
@@ -66,7 +66,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f2f7fb;
+  background-color: var(--Contact-card);
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
@@ -83,7 +83,6 @@
   margin: 0.75rem 0;
   border-radius: 10px;
   cursor: pointer;
-  background-color: var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 .app__footer-form div input,
@@ -107,10 +106,10 @@
 .app__footer-form button {
   padding: 1rem 2rem;
   border-radius: 10px;
-  border: none;
-  background-color: var(--secondary-color);
+  border: 1px solid var(--gray-color);
+  background-color: var(--ButtonBg-color);
   font-weight: 500;
-  color: var(--white-color);
+  color: var(--ContactCardText);
   outline: none;
   margin: 2rem 0 0 0;
   font-family: var(--font-base);
@@ -118,7 +117,9 @@
   cursor: pointer;
 }
 .app__footer-form button:hover {
-  background-color: #2430af;
+  background-color: var(--ButtonHover);
+  box-shadow: 0 0 25px #f2f7fb;
+  
 }
 @media screen and (max-width: 768px) {
   .app__footer-form {

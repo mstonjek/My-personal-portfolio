@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"); /** fonts **/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
   --font-base: "DM Sans", sans-serif;
@@ -7,7 +7,7 @@
   --secondary-color: #313bac;
   --onhover-color: #c2d4ec;
   --black-color: #030303;
-  --lightGray-color: #e4e4e4; /*? color setup */
+  --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
@@ -16,26 +16,46 @@
   --logo-src: url("./assets/logo.png");
   --DarkModeSwitcher: #000;
   --DMSwitcher-color: #c6c7c8;
+  --BoxShadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  --Span-color: #313bac;
+  --Testimonial-title: #313bac;
+  --Contact-card: #fef4f5;
+  --Contact-text: #030303;
+  --onhover-contact: #c2d4ec;
+  --ContactCardText: #030303;
+  --ButtonContact: #313bac;
+  --ButtonBg-color: #c2d4ec;
+  --ButtonHover: #ffd700;
 }
 
 :root.dark-mode {
-  --primary-color: #2e3440; /* A deep burgundy */
-  --secondary-color: #313bac; /* Your secondary color */
-  --onhover-color: #280e27; /* Slightly darker shade for hover effect */
-  --black-color: #88c0d0; /* Adjusted text color for dark mode */
-  --lightGray-color: #e4e4e4; /* Light gray for various UI elements */
-  --gray-color: #e4e4e4; /* A slightly darker gray */
-  --brown-color: #8b4513; /* A muted brownish color */
-  --white-color: #2c3e50; /* Background color for dark mode */
-  --dots-color: none; /* A color for indicating dots or separators */
-  --bg-src: none; /* Adjusted background image source */
+  --primary-color: #2e3440;
+  --secondary-color: #88c0d0;
+  --onhover-color: #280e27;
+  --black-color: #88c0d0; 
+  --lightGray-color: #e4e4e4; 
+  --gray-color: #e4e4e4; 
+  --brown-color: #8b4513; 
+  --white-color: #2c3e50; 
+  --dots-color: none; 
+  --bg-src: none;
   --DarkModeSwitcher: #e4e4e4;
-  --DMSwitcher-color: #2c3e50;
+  --DMSwitcher-color: #88c0d0;
+  --BoxShadow: none;
+  --Span-color: #fff;
+  --Testimonial-title: #ffd700;
+  --Contact-card: #c2d4ec;
+  --Contact-text: #e4e4e4;
+  --onhover-contact: #ffd700;
+  --ContactCardText: #030303;
+  --ButtonContact: #c2d4ec;
+  --ButtonHover: #ffd700;
+  --ButtonBg-color: #c2d4ec;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0; /**  ----------------     basic css     ------------------------- */
+  padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }

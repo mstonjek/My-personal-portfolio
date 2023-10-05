@@ -26,7 +26,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text">
-        <span>Skills</span> & <span>Experiences</span>
+        <span>Skills</span> & <span>Experiences</span> 📚🔍
       </h2>
 
       <div className="app__skills-container">

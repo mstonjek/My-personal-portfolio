@@ -58,7 +58,7 @@
   text-transform: capitalize;
 }
 .head-text span {
-  color: var(--secondary-color);
+  color: var(--Span-color);
 }
 @media screen and (min-width: 2000px) {
   .head-text {
