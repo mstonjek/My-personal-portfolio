@@ -79,6 +79,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  margin-left: 1.5rem;
 }
 .app__navbar-menu svg {
   width: 70%;
@@ -185,5 +186,9 @@
 .dm {
   background-color: rgba(255, 255, 255, 0.05)!important;;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;  
+}
+.flex_sort {
+  display: flex;
+  
 }
 /*# sourceMappingURL=Navbar.css.map */

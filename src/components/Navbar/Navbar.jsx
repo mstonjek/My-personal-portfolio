@@ -42,70 +42,71 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
+      <div className="flex_sort">
+        <Dropdown className="dropdown">
+          <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle">
+            {isDarkMode ? <HiMoon className="icon" /> : null}
+            {!isDarkMode && !isAutoMode ? (
+              <BsBrightnessHighFill className="icon" />
+            ) : null}
+            {isAutoMode ? <WiMoonAltThirdQuarter className="icon" /> : null}
+          </Dropdown.Toggle>
 
-        {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
-          >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
+          <Dropdown.Menu className="dm">
+            <Dropdown.Item
+              onClick={() => changeMode("light")}
+              className="dropdown-item"
+            >
+              <BsBrightnessHighFill className="icon" />
+              <span className="dropdown-text">Light</span>
+              {!isDarkMode && !isAutoMode && (
+                <BsCheck2 className="checkmark" />
+              )}{" "}
+            </Dropdown.Item>
+            <Dropdown.Item
+              onClick={() => changeMode("dark")}
+              className="dropdown-item"
+            >
+              <HiMoon className="icon" />
+              <span className="dropdown-text">Dark</span>
+              {isDarkMode && !isAutoMode && (
+                <BsCheck2 className="checkmark" />
+              )}{" "}
+            </Dropdown.Item>
+
+            <Dropdown.Item
+              onClick={() => changeMode("auto")}
+              className="dropdown-item"
+            >
+              <WiMoonAltThirdQuarter className="icon" />
+              <span className="dropdown-text">Auto</span>
+              {isAutoMode && !isDarkMode && (
+                <BsCheck2 className="checkmark" />
+              )}{" "}
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <div className="app__navbar-menu">
+          <HiMenuAlt4 onClick={() => setToggle(true)} />
+          {toggle && (
+            <motion.div
+              whileInView={{ x: [300, 0] }}
+              transition={{ duration: 0.85, ease: "easeOut" }}
+            >
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+                {["home", "about", "work", "skills", "contact"].map((item) => (
+                  <li key={item}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </div>
       </div>
-      <Dropdown className="dropdown">
-        <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle">
-          {isDarkMode ? <HiMoon className="icon" /> : null}
-          {!isDarkMode && !isAutoMode ? (
-            <BsBrightnessHighFill className="icon" />
-          ) : null}
-          {isAutoMode ? <WiMoonAltThirdQuarter className="icon" /> : null}
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu className="dm">
-          <Dropdown.Item
-            onClick={() => changeMode("light")}
-            className="dropdown-item"
-          >
-            <BsBrightnessHighFill className="icon" />
-            <span className="dropdown-text">Light</span>
-            {!isDarkMode && !isAutoMode && (
-              <BsCheck2 className="checkmark" />
-            )}{" "}
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => changeMode("dark")}
-            className="dropdown-item"
-          >
-            <HiMoon className="icon" />
-            <span className="dropdown-text">Dark</span>
-            {isDarkMode && !isAutoMode && (
-              <BsCheck2 className="checkmark" />
-            )}{" "}
-          </Dropdown.Item>
-
-          <Dropdown.Item
-            onClick={() => changeMode("auto")}
-            className="dropdown-item"
-          >
-            <WiMoonAltThirdQuarter className="icon" />
-            <span className="dropdown-text">Auto</span>
-            {isAutoMode && !isDarkMode && (
-              <BsCheck2 className="checkmark" />
-            )}{" "}
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
     </nav>
   );
 };
