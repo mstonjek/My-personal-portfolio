@@ -1,22 +1,21 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion"; // ! better import
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 
 import "../Css/Header.css";
 
-const scaleVariants ={
+const scaleVariants = {
   whileInView: {
-    scale: [0,1],
-    opacity:  [0,1],
+    scale: [0, 1],
+    opacity: [0, 1],
     transition: {
       duration: 1,
       ease: "easeOut",
-    }  
-  }
-}
-
+    },
+  },
+};
 
 const Header = () => {
   return (
@@ -35,10 +34,9 @@ const Header = () => {
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">🐘 Backend PHP Developer</p>
-            <p className="p-text">🚀 Project Launcher</p>
-            <p className="p-text">🌐 Web Enthusiast</p>
-            <p className="p-text">🌌 Infinite Coder</p>
+            <p className="p-text">🐘 PHP Web Developer | 📆⏳ 15 Years Old</p>
+            <p className="p-text">🚀 Project Launcher |  🩸 Czech Blood</p>
+            <p className="p-text">🌐 Web enthusiast | 🌌 Infinite coder</p>
           </div>
         </div>
       </motion.div>
@@ -74,4 +72,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");

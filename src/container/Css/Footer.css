@@ -56,7 +56,7 @@
 }
 @media screen and (max-width: 450px) {
   .app__footer-cards .app__footer-card {
-    width: 100%;
+    width: 20%;
   }
 }
 @media screen and (max-width: 768px) {

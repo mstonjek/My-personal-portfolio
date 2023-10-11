@@ -44,20 +44,7 @@ const Footer = () => {
     <>
       <h2 className="head-text">☕ Brewing Connections Over Coffee! ☕</h2>
 
-      <div className="app__footer-cards">
-        <div className="app__footer-card ">
-          <img src={images.email} alt="email" />
-          <a href="mailto:mich.stonjek@gmail.com" className="p-text">
-            mich.stonjek@gmail.com
-          </a>
-        </div>
-        <div className="app__footer-card ">
-          <img src={images.mobile} alt="email" />
-          <a href="mailto:mich.stonjek@gmail.com" className="p-text">
-            mich.stonjek@gmail.com
-          </a>
-        </div>
-      </div>
+      
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">

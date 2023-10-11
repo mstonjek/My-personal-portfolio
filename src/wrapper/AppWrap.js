@@ -13,7 +13,8 @@ const AppWrap = (Component, idName, className) =>
           <div className="copyright">
             <p className="p-text">🔐 All rights bytefully reserved</p>
             <p className="p-text">
-              🚀 Crafting the Future | © 2023 Michal Stonjek
+              🚀<span className="copyspan">Crafting the Future | </span>© 2023
+              Michal Stonjek
             </p>
           </div>
         </div>

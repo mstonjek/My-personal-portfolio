@@ -43,7 +43,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="flex_sort">
-        <Dropdown className="dropdown">
+        <Dropdown className="dropdownheight">
           <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle">
             {isDarkMode ? <HiMoon className="icon" /> : null}
             {!isDarkMode && !isAutoMode ? (

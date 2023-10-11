@@ -145,7 +145,27 @@
   .app__navbar-menu {
     display: none;
   }
+  
 }
+
+@media screen and (max-width: 900px) {
+    #darkModeToggle{
+    height: 85% !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 2px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    
+  }
+  .icon{
+    margin-right: 0 !important;
+  }
+}
+
+
+
 
 .dropdown-text {
   margin-left: 8px;
@@ -182,6 +202,7 @@
 }
 #darkModeToggle{
   border-color: none !important;
+  
 }
 .dm {
   background-color: rgba(255, 255, 255, 0.05)!important;;
@@ -189,6 +210,5 @@
 }
 .flex_sort {
   display: flex;
-  
 }
 /*# sourceMappingURL=Navbar.css.map */
