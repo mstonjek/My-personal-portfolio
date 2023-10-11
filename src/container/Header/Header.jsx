@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion"; // ! better import
 
 import { AppWrap } from "../../wrapper";
@@ -18,6 +18,27 @@ const scaleVariants = {
 };
 
 const Header = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  // Funkce pro generování náhodného čísla
+  const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  useEffect(() => {
+    // Generuj náhodné číslo při načítání stránky
+    const randomNumber = getRandomInt(0, 1);
+
+    // Na základě náhodného čísla vyber jednu z fotek
+    const photoUrl =
+      randomNumber === 0
+        ? process.env.PUBLIC_URL + "Nobg1.png"
+        : process.env.PUBLIC_URL + "NoBg2Resized.png";
+
+    // Nastav vybranou fotku do stavu
+    setSelectedPhoto(photoUrl);
+  }, []); // Závislosti jsou prázdné, takže se s
+
   return (
     <div id="home" className="app__header app__flex">
       <motion.div
@@ -35,7 +56,7 @@ const Header = () => {
           </div>
           <div className="tag-cmp app__flex">
             <p className="p-text">🐘 PHP Web Developer | 📆⏳ 15 Years Old</p>
-            <p className="p-text">🚀 Project Launcher |  🩸 Czech Blood</p>
+            <p className="p-text">🚀 Project Launcher | 🩸 Czech Blood</p>
             <p className="p-text">🌐 Web enthusiast | 🌌 Infinite coder</p>
           </div>
         </div>
@@ -46,7 +67,7 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img src={selectedPhoto} alt="Profile Picture" />
 
         <motion.img
           whileInView={{ scale: [0, 1] }}
