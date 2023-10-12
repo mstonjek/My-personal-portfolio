@@ -25,11 +25,11 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         {isDarkMode ? (
-          <a href="http://localhost:3000">
+          <a href="https://www.mstonjek.cz">
             <img src={images.logoDark} alt="logo" />
           </a>
         ) : (
-          <a href="http://localhost:3000">
+          <a href="https://www.mstonjek.cz">
             <img src={images.logo} alt="logo" />
           </a>
         )}
