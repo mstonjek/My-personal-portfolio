@@ -46,7 +46,7 @@ const Footer = () => {
         <h2 className="head-text">☕ Brewing Connections Over Coffee! ☕</h2>
         <div className="app__flex">
           <h3>
-            <a class="icon-link link_color" href="#">
+            <a class="icon-link link_color" href="mailto:business@mstonjek.cz">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
