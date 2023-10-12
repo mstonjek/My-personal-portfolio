@@ -26,6 +26,7 @@
   --ButtonContact: #313bac;
   --ButtonBg-color: #c2d4ec;
   --ButtonHover: #ffd700;
+  --ContactLinkColor: #313bac;
 }
 
 :root.dark-mode {
@@ -51,6 +52,7 @@
   --ButtonContact: #c2d4ec;
   --ButtonHover: #ffd700;
   --ButtonBg-color: #c2d4ec;
+  --ContactLinkColor: #fff;
 }
 
 * {

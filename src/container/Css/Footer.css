@@ -119,7 +119,6 @@
 .app__footer-form button:hover {
   background-color: var(--ButtonHover);
   box-shadow: 0 0 25px #f2f7fb;
-  
 }
 @media screen and (max-width: 768px) {
   .app__footer-form {
@@ -128,4 +127,14 @@
   }
 }
 
-/*# sourceMappingURL=Footer.css.map */
+.app__flex__Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.link_color {
+  color: var(--ContactLinkColor) !important;
+  text-decoration-color: var(--ContactLinkColor) !important;
+  font-weight: 400 !important;
+} /*# sourceMappingURL=Footer.css.map */
